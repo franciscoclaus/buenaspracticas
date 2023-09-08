@@ -1,14 +1,15 @@
-let Edad_del_usuario = 25;
-function Comprobar_requisitos_del_usuario(){
-    let tieneVehiculo = true;
-    if (Edad_del_usuario >= 18){
-        if(tieneVehiculo===true){
+let userAge = 25;
+let hasCar = true;
+
+function canDrive() {
+    try {
+        if (userAge >= 18 && hasCar) {
             return true;
-        }else {
+        } else {
             return false;
         }
-    }else{
-        return false;
+    } catch {
+        console.log("dato invalido");
     }
 }
-console.log(Comprobar_requisitos_del_usuario());
+console.log(canDrive()); //Comprobar_requisitos_del_usuario
